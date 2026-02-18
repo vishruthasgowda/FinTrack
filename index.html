@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header with profile -->
+    <header>
+      <h1>Expense Tracker</h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png" alt="Profile" class="profile-icon">
+    </header>
+
+    <!-- Balance -->
+    <div class="balance">
+      <h2>Total Balance</h2>
+      <h3 id="balance">₹0</h3>
+      <p id="remaining">Remaining: ₹0</p>
+    </div>
+
+    <!-- Income & Expense Buttons -->
+    <div class="buttons">
+      <button id="incomeBtn">Add Income</button>
+      <button id="expenseBtn">Add Expense</button>
+    </div>
+
+    <!-- Transaction List -->
+    <ul id="transactions"></ul>
+
+    <!-- Form Modal -->
+    <div id="formModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="formTitle">Add Transaction</h2>
+        <input type="text" id="descInput" placeholder="Description">
+        <input type="number" id="amountInput" placeholder="Amount">
+        <button id="addTransactionBtn">Add</button>
+      </div>
+    </div>
+
+    <!-- Summary Graph -->
+    <div class="summary">
+      <h2>Summary</h2>
+      <canvas id="summaryChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
